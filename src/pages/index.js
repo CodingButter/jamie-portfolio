@@ -11,7 +11,7 @@ import Hero from "../components/hero"
 const IndexPage = () => {
   const { cityScapeImage } = useStaticQuery(graphql`
     query {
-      cityScapeImage: file(relativePath: { eq: "city_scape.jpg" }) {
+      cityScapeImage: file(relativePath: { eq: "city_scape1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2560) {
             ...GatsbyImageSharpFluid
