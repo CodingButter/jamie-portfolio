@@ -1,37 +1,43 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import Edges from "./edges"
 import * as theme from "../theme"
 
 export default ({ siteTitle }) => (
   <Header>
-    <Nav>
-      <h3>
-        <Link to="/">{siteTitle}</Link>
-      </h3>
-    </Nav>
+    <Edges>
+      <Nav>
+        <h3>
+          <Link to="/">{siteTitle}</Link>
+        </h3>
+      </Nav>
+    </Edges>
   </Header>
 )
 
 const Header = styled.div`
-  background: #202020;
+  background: ${theme.colors.lightest};
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 5px;
   z-index: 99;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
+  box-shadow: ${theme.shadows[2]};
 `
 
 const Nav = styled.nav`
   display: flex;
+  align-items: center;
   a {
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: ${theme.colors.primary};
+      color: ${theme.colors.mid_light};
     }
+  }
+  h3 {
+    margin: 0;
   }
 `

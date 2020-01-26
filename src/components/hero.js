@@ -1,8 +1,8 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import Img from "gatsby-image"
 
 import BackgroundImage from "../components/backgroundImage"
+import Edges from "./edges"
 
 const Hero = ({ image, children, overlay }) => {
   return (
@@ -25,7 +25,7 @@ const Container = styled.div`
   overflow: hidden;
   position: relative;
   min-height: 420px;
-
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,13 +46,12 @@ const Container = styled.div`
     `}
 `
 
-const Content = styled.div`
+const Content = styled(Edges)`
   position: relative;
   z-index: 2;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content:center;
   align-items: center;
-
-  padding: 120px 20px;
 `
